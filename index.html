@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phytochem</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" id="logo">LOGO</a>
+        <button id="openMenu">&#9776</button>
+        <nav id="menu">
+            <button id="closeMenu">X</button>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+
+    </header>
+    
+    <main>
+        <p>Princial</p>
+
+    </main>
+
+    <aside><!-- informações da pagina -->
+        <p>Relacionado</p>
+    </aside>
+
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+
+    <script type="text/javascript">
+
+        openMenu.addEventListener('click', () => {
+            menu.style.display = 'flex'
+
+            menu.style.right = (menu.offsetWidth * -1) + 'px' 
+            setTimeout(() => {
+                menu.style.opacity = 1
+
+                menu.style.right = '0'
+            }, 10)
+            
+        })
+
+        closeMenu.addEventListener('click', () => {
+            menu.style.opacity = '0'
+            menu.style.right = (menu.offsetWidth * -1) + 'px' 
+
+            setTimeout(() => {
+                menu.removeAttribute('style')
+            }, 200)
+            
+        })
+
+    </script>
+</body>
+</html>
